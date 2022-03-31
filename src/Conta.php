@@ -3,17 +3,13 @@
 
 class Conta
 {
-    private string $cpfTitular;
-    private string $nomeTitular;
-    private float $saldoTitular;
+    private Titular $titular;
     private static int $numeroDeContas = 0;
 
 
-    public function __construct(string $cpfTitular, string $nomeTitular)
+    public function __construct($titular)
     {
-        $this->cpfTitular = $cpfTitular;
-        $this->validaNome($nomeTitular);
-        $this->nomeTitular = $nomeTitular;
+        $this->titular = $titular;
         $this->saldoTitular = 0 ;
         // Atribuindo dados a propria classe *Dados estaticos não mudam de instancia pra instancia
         Conta::$numeroDeContas++; 
@@ -58,19 +54,6 @@ class Conta
         return $this->saldoTitular;
     }
 
-    
-    public function pegaCPF(): string {
-        return $this->cpfTitular;
-    }
-    public function pegaNome(): string {
-        return $this->nomeTitular;
-    }
-    public function validaNome(string $name) {
-        if (strlen($name > 5)) {
-            echo 'nome precisa de 5 caracteres';
-            exit();
-        }
-    }
     public static function quantidadeDeContas(): int {
         //return Conta::$numeroDeContas;
         return self::$numeroDeContas; 
