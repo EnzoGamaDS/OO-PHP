@@ -3,8 +3,9 @@ class Titular {
 
     private Cpf $cpf;
     private string $nome;
+    private Endereco $endereco;
 
-    public function __construct($nome, $cpf)
+    public function __construct($nome, $cpf, $endereco)
     {
         $this->cpf = $cpf;
         $this->nome = $nome;
@@ -18,6 +19,10 @@ class Titular {
             echo 'nome precisa de 5 caracteres';
             exit();
         }
+    }
+    public function pegarEndereco(): Endereco
+    {
+        return $this->endereco;
     }
 
 }
