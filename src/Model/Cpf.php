@@ -1,5 +1,7 @@
 <?php
 
+namespace Model\account;
+
 class Cpf{
 
     private string $cpf;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 class Funcionario extends Pessoa
 {
     private string $cargo;
@@ -10,25 +12,16 @@ class Funcionario extends Pessoa
         $this->cargo  = $cargo;
     }
 
-    /**
-     * @return string
-     */
     public function pegarNome(): string
     {
         return $this->getNome();
     }
 
-    /**
-     * @return string
-     */
     public function getCpf(): Cpf
     {
         return $this->getCpf();
     }
 
-    /**
-     * @return string
-     */
     public function getCargo(): string
     {
         return $this->cargo;

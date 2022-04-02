@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+namespace Model;
 
 class Endereco{
     private string $cidade;

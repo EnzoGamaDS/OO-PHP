@@ -1,5 +1,7 @@
 <?php
 
+namespace Model\account;
+
 class Pessoa
 {
     private string $nome;
@@ -12,34 +14,22 @@ class Pessoa
         $this->cpf = $cpf;
     }
 
-    /**
-     * @param string $nome
-     */
     public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
 
-    /**
-     * @param Cpf $cpf
-     */
     public function setCpf(Cpf $cpf): void
     {
         $this->cpf = $cpf;
     }
 
 
-    /**
-     * @return string
-     */
     public function getNome(): string
     {
         return $this->nome;
     }
 
-    /**
-     * @return Cpf
-     */
     public function getCpf(): Cpf
     {
         return $this->cpf->getCpf();

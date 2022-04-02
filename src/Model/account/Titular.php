@@ -1,4 +1,8 @@
 <?php
+
+namespace Model\account;
+
+
 class Titular extends Pessoa {
 
     private Endereco $endereco;
