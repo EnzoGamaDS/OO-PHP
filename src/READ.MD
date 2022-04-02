@@ -6,6 +6,10 @@
 
     -Encapsulamento : 
         Devemos expor somente o necessário separarando a classe para que ela só tenha a implementação sendo realizada.
+    - Herança :
+        Possibilidade de uma classe herdar todos os atributos de outra.
+    -Visibilidade : 
+        Definição de quem pode ou não pode acessar o metodo ou atributo de uma classe
 
     Anotações OO:
     __construct - algo a ser realizado quando chamar a classe

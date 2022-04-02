@@ -1,25 +1,14 @@
 <?php
-class Titular {
+class Titular extends Pessoa {
 
-    private Cpf $cpf;
-    private string $nome;
     private Endereco $endereco;
 
-    public function __construct($nome, $cpf, $endereco)
+    public function __construct(Pessoa $nome, Cpf $cpf, $endereco)
     {
-        $this->cpf = $cpf;
-        $this->nome = $nome;
+		$this->validaNome($nome);
+        parent::__construct($nome, $cpf);
     }
 
-    public function getNome(){
-        return $this->titular->nome;
-    }
-    public function validaNome(string $name) {
-        if (strlen($name > 5)) {
-            echo 'nome precisa de 5 caracteres';
-            exit();
-        }
-    }
     public function pegarEndereco(): Endereco
     {
         return $this->endereco;
