@@ -1,7 +1,6 @@
 <?php
 
 namespace Model\account;
-
 class Pessoa
 {
     private string $nome;

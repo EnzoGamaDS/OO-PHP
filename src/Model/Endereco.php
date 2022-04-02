@@ -1,7 +1,6 @@
 <?php
 
 namespace Model;
-
 class Endereco{
     private string $cidade;
     private string $bairro;
